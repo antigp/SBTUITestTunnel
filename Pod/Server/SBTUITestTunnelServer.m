@@ -30,9 +30,7 @@
 #import "SBTStubResponse.h"
 #import "SBTRewrite.h"
 #import "SBTMonitoredNetworkRequest.h"
-#import <GCDWebServer/GCDWebServer.h>
-#import <GCDWebServer/GCDWebServerURLEncodedFormRequest.h>
-#import <GCDWebServer/GCDWebServerDataResponse.h>
+@import GCDWebServer;
 #import "NSData+SHA1.h"
 #import <CoreLocation/CoreLocation.h>
 
