@@ -24,7 +24,7 @@
 
 @import XCTest;
 
-#import <SBTUITestTunnel/SBTUITunneledApplication.h>
+#import "SBTUITunneledApplication.h"
 
 @interface XCTestCase (AppExtension)
 

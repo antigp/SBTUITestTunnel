@@ -23,7 +23,7 @@
 #if ENABLE_UITUNNEL
 
 #import <Foundation/Foundation.h>
-@import MixboxIpcSbtuiCommon;
+@import SBTUITestTunnelCommon;
 
 @class SBTStubResponse;
 @class SBTRewrite;

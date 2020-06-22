@@ -8,22 +8,27 @@ let package = Package(
         .iOS(.v9),
     ],
     products: [
-        .library(name: "MixboxIpcSbtuiClient", targets: ["MixboxIpcSbtuiServer"]),
-        .library(name: "MixboxIpcSbtuiServer", targets: ["MixboxIpcSbtuiServer"]),
+        .library(name: "SBTUITestTunnelClient", targets: ["SBTUITestTunnelClient"]),
+        .library(name: "SBTUITestTunnelServer", targets: ["SBTUITestTunnelServer"]),
     ],
     dependencies: [
         .package(name: "GCDWebServer", url: "https://github.com/SlaunchaMan/GCDWebServer.git",.branch("swift-package-manager")),
     ],
     targets: [
         .target(
-            name: "MixboxIpcSbtuiClient",
-            dependencies: [.target(name: "MixboxIpcSbtuiCommon")], path: "Pod/Client"),
+            name: "SBTUITestTunnelClient",
+            dependencies: [
+                .target(name: "SBTUITestTunnelCommon")
+            ], path: "Pod/Client"),
         .target(
-            name: "MixboxIpcSbtuiServer",            
-            dependencies: ["GCDWebServer", .target(name: "MixboxIpcSbtuiCommon")],
+            name: "SBTUITestTunnelServer",
+            dependencies: [
+                "GCDWebServer",
+                .target(name: "SBTUITestTunnelCommon")
+            ],
             path: "Pod/Server"),
         .target(
-            name: "MixboxIpcSbtuiCommon",
+            name: "SBTUITestTunnelCommon",
             path: "Pod/Common",
             publicHeadersPath: "."),
     ]
