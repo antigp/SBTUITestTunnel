@@ -19,14 +19,16 @@ let package = Package(
             name: "SBTUITestTunnelClient",
             dependencies: [
                 .target(name: "SBTUITestTunnelCommon")
-            ], path: "Pod/Client"),
+            ], path: "Pod/Client",
+            publicHeadersPath: "."),
         .target(
             name: "SBTUITestTunnelServer",
             dependencies: [
                 "GCDWebServer",
                 .target(name: "SBTUITestTunnelCommon")
             ],
-            path: "Pod/Server"),
+            path: "Pod/Server",
+            publicHeadersPath: "."),
         .target(
             name: "SBTUITestTunnelCommon",
             path: "Pod/Common",
