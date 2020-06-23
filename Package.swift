@@ -8,8 +8,8 @@ let package = Package(
         .iOS(.v9),
     ],
     products: [
-        .library(name: "SBTUITestTunnelClient", type: .dynamic, targets: ["SBTUITestTunnelClient"]),
-        .library(name: "SBTUITestTunnelServer", type: .dynamic, targets: ["SBTUITestTunnelServer"]),
+        .library(name: "SBTUITestTunnelClient", type: .static, targets: ["SBTUITestTunnelClient"]),
+        .library(name: "SBTUITestTunnelServer", type: .static, targets: ["SBTUITestTunnelServer"]),
     ],
     dependencies: [
         .package(name: "GCDWebServer", url: "https://github.com/SlaunchaMan/GCDWebServer.git",.branch("swift-package-manager")),
