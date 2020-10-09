@@ -12,7 +12,7 @@ let package = Package(
         .library(name: "SBTUITestTunnelServer", type: .static, targets: ["SBTUITestTunnelServer"]),
     ],
     dependencies: [
-        .package(name: "GCDWebServer", url: "https://github.com/SlaunchaMan/GCDWebServer.git",.branch("swift-package-manager")),
+        .package(name: "GCDWebServer", url: "https://github.com/SlaunchaMan/GCDWebServer.git",.revision("5cc010813d797c3f40557c740a4f620bf84da4dd")),
     ],
     targets: [
         .target(
